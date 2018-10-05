@@ -1,0 +1,29 @@
+{
+  "name": "bookworm",
+  "version": "1.0.0",
+  "description": "A project to demonstrate basic authentication and authorization",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fallencloud/Bookworm.git"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "mongo",
+    "mongoose",
+    "pug"
+  ],
+  "author": "Sharina V. Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fallencloud/Bookworm/issues"
+  },
+  "homepage": "https://github.com/fallencloud/Bookworm#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
