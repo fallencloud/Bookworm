@@ -4,14 +4,21 @@ const router = require('express').Router();
 // GET /
 router.get('/', (req, res, next) => {
 
-  res.render('index');
+  res.render('index', {site: "Home"});
   next();
 });
 
 // signup
 // GET /signup
 router.get('/signup', (req, res, next) => {
-  res.send("<h1>Signup form</h1>");
+  res.render('signup', {site: "Register"});
+  next();
+});
+
+// signup
+// POST /signup
+router.post('/signup', (req, res, next) => {
+  res.send('<h1>Sign Up Complete!');
   next();
 });
 
@@ -24,22 +31,20 @@ router.get('/login', (req, res, next) => {
 // about
 // GET /about
 router.get('/about', (req, res, next) => {
-  res.render('about');
+  res.render('about', {site: "About"});
   next();
 });
 
 // contact
 // GET /contact
 router.get('/contact', (req, res, next) => {
-  res.send("<h1>Contact Page</h1>");
+  res.render('contact', {site: "Contact"});
   next();
 });
 
 // profile
 // GET /profile
-router.get('/profile', (req, res, next) => {
-  res.send("<h1>Profile Page</h1>");
-});
+
 
 //export the router
 module.exports = router;

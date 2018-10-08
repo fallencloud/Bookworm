@@ -9,10 +9,10 @@ html(lang='en')
     // CSS
     link(rel='stylesheet', href="/stylesheets/style.css")
       
-    title Bookworm | Home
+    title Bookworm | #{site}
   body
     nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-      a.navbar-brand(href='#') Bookworm
+      a.navbar-brand(href='/') Bookworm
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
         span.navbar-toggler-icon
       #navbarNav.collapse.navbar-collapse
@@ -25,7 +25,7 @@ html(lang='en')
             a.nav-link(href='contact') Contact
           li.nav-item
             a.nav-link(href='profile') My Profile
-        button.btn.btn-info(type='button') Info
+        button.btn.btn-info(type='button') Log In
 
     block content
 

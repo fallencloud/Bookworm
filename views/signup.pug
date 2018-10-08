@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  form.container(action="/signup", method="POST")
+    .form-group
+      label(for='firstName') First Name
+      input#firstName.form-control(aria-describedby='firstName', placeholder='First Name', type='text')
+    .form-group
+      label(for='lastName') Last Name
+      input#lastName.form-control(aria-describedby='lastName', placeholder='Last Name', type='text')
+    .form-group
+      label(for='email') Email address
+      input#email.form-control(aria-describedby='emailHelp', placeholder='Enter email', type='email')
+    .form-group
+      label(for='password') Password
+      input#password.form-control(placeholder='Password', type='password')
+    .form-group
+      label(for='confirmPassword') Confirm Password
+      input#confirmPassword.form-control(placeholder='Confirm Password', type='password')
+    .form-group
+      label(for='faveBook') Favorite Book
+      input#faveBook.form-control(placeholder='Favorite Book', type='text')
+    button.btn.btn-primary(type='submit') Sign Up

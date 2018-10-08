@@ -18,6 +18,23 @@ const port = process.env.port || 3000;
 
 //middleware
 
+//basic error handling
+app.use((req, res, next) => {
+  const err = new Error('File Not Found');
+  err.status = 404;
+  next(err);
+});
+
+app.use((err, req, res, next) => {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    site: "Error",
+    error: {}
+  });
+
+});
+
 //boiler plate code
 app.listen(port, (err) => {
   if (err) {
@@ -25,4 +42,4 @@ app.listen(port, (err) => {
   } else {
     console.info(`Now listening on port ${port}`);
   }
-})
+});
